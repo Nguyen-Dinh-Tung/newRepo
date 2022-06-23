@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #result {
+      width: 900px;
+      height: 50px;
+      margin: 0;
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
+  <body onload="load()">
+    <input
+      type="number"
+      id="point"
+      width="1000"
+      height="200"
+      style="display: none"
+      disabled
+    />
+    <p id="result">Heloo</p>
+    <canvas
+      id="canvas"
+      width="900"
+      height="900"
+      style="border: 1px solid #ccc"
+    ></canvas>
+    <img src="/js/img/car.png" alt="" style="display: none" />
+    <img src="/js/img/star.jpg" alt="" style="display: none" />
+    <img src="/js/img/endGame.png" alt="" style="display: none" />
+  </body>
+  <script src="/js/Car.js"></script>
+  <script src="/js/Main.js"></script>
+</html>
