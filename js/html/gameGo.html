@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #img_brick {
+      margin: 0;
+    }
+    #start {
+      margin: 0;
+      width: 1800px;
+      height: 900px;
+    }
+    #pointLayout {
+      margin: 0;
+      height: 84px;
+      width: 216px;
+      position: relative;
+      left: -7px;
+      top: -74px;
+      background-color: rgba(0, 255, 255, 0.3);
+      text-align: center;
+    }
+    #result {
+      font-size: 40px;
+      margin: 0;
+    }
+  </style>
+  <body onload="onLoad()">
+    <img
+      src="/js/img/background-2.jpg"
+      id="img_background"
+      style="position: absolute; height: 98vh; width: 1900px"
+    />
+    <div>
+      <div id="start" style="position: absolute"></div>
+      <div id="start_two"></div>
+      <div id="start_three"></div>
+    </div>
+    <div id="pointLayout">
+      <p id="result"></p>
+      Point
+    </div>
+  </body>
+  <script src="/js/js/checkWinLose.js"></script>
+  <script src="/js/js/object.js"></script>
+  <script src="/js/js/Brick.js"></script>
+  <script src="/js/js/Star.js"></script>
+  <script src="/js/js/maingame.js"></script>
+</html>

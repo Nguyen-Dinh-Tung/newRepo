@@ -22,3 +22,6 @@ class Flashlamp {
     this.status = true;
   }
 }
+let str = "1234px";
+let b = str.slice(0, -2);
+console.log(b);
