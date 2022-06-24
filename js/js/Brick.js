@@ -46,9 +46,9 @@ class Brick {
   }
   moveBrick() {
     setInterval(() => {
-      this.corFristY += this.x;
-      this.corNextY -= this.x;
-      this.corLastX -= this.x * 3;
+      this.corFristY += this.x * 2;
+      this.corNextY -= this.x * 2;
+      this.corLastX -= this.x * 4;
       this.delayMover();
       this.randomXyBrick();
     }, this.time);
