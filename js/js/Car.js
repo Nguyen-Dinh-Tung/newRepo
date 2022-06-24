@@ -97,6 +97,7 @@ class Car {
       moveStar();
       this.drawCar();
       this.drawStar();
+
       this.checkPoint();
       this.drawObstacle();
     }, 500);
@@ -114,10 +115,6 @@ class Car {
       this.drawStar();
       this.checkPoint();
       this.drawObstacle();
-
-      console.log(this.checkPoint());
-      console.log(this.point);
-      console.log(this.starY);
     }, 150);
   }
   runUpPoint() {
