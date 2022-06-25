@@ -2,10 +2,14 @@ let listTable = document.getElementById("caro");
 let flag = 0;
 let btn_start = document.getElementById("btn_start");
 let playerWin = document.getElementById("result");
+let arr = [];
+
 let td = document.querySelectorAll("td");
 btn_start.addEventListener("click", rePlayGame);
 function rePlayGame() {
+  console.log(arr);
   td.innerHTML = "";
+  arr = [];
   renderListTable();
 }
 
@@ -34,7 +38,6 @@ function handleClick(x, y) {
     }
   }
   function checkWin() {
-    let arr = [];
     for (let i = 0; i < 10; i++) {
       arr[i] = [];
       for (let j = 0; j < 10; j++) {
@@ -52,7 +55,6 @@ function handleClick(x, y) {
           arr[i + 4][j + 4] == "x"
         ) {
           playerWin.innerHTML = "Người chơi X win";
-          document.getElementById(`${x}${y}`).innerText == "";
           renderListTable();
         } else if (
           arr[i][j] == "x" &&
@@ -62,7 +64,6 @@ function handleClick(x, y) {
           arr[i + 4][j - 4] == "x"
         ) {
           playerWin.innerHTML = "Người chơi X win";
-          document.getElementById(`${x}${y}`).innerText == "";
           renderListTable();
         } else if (
           arr[i][j] == "x" &&
@@ -72,7 +73,15 @@ function handleClick(x, y) {
           arr[i][j + 4] == "x"
         ) {
           playerWin.innerHTML = "Người chơi X win";
-          document.getElementById(`${x}${y}`).innerText == "";
+          renderListTable();
+        } else if (
+          arr[i][j] == "x" &&
+          arr[i + 1][j] == "x" &&
+          arr[i + 2][j] == "x" &&
+          arr[i + 3][j] == "x" &&
+          arr[i + 4][j] == "x"
+        ) {
+          playerWin.innerHTML = "Người chơi X win";
           renderListTable();
         }
         // check o
@@ -84,7 +93,6 @@ function handleClick(x, y) {
           arr[i + 4][j + 4] == "o"
         ) {
           playerWin.innerHTML = "Người chơi O win";
-          document.getElementById(`${x}${y}`).innerText == "";
           renderListTable();
         } else if (
           arr[i][j] == "o" &&
@@ -94,7 +102,6 @@ function handleClick(x, y) {
           arr[i + 4][j - 4] == "o"
         ) {
           playerWin.innerHTML = "Người chơi O win";
-          document.getElementById(`${x}${y}`).innerText == "";
           renderListTable();
         } else if (
           arr[i][j] == "o" &&
@@ -104,7 +111,15 @@ function handleClick(x, y) {
           arr[i][j + 4] == "o"
         ) {
           playerWin.innerHTML = "Người chơi O win";
-          document.getElementById(`${x}${y}`).innerText == "";
+          renderListTable();
+        } else if (
+          arr[i][j] == "o" &&
+          arr[i + 1][j] == "o" &&
+          arr[i + 2][j] == "o" &&
+          arr[i + 3][j] == "o" &&
+          arr[i + 4][j] == "o"
+        ) {
+          playerWin.innerHTML = "Người chơi O win";
           renderListTable();
         }
       }
