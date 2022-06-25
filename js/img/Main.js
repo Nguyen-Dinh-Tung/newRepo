@@ -6,8 +6,6 @@ car.drawCar();
 car.drawStar();
 car.checkLose();
 car.max = 900;
-console.log(car.max);
-console.log(car.height);
 function moveSelection(evt) {
   switch (evt.keyCode) {
     case 37:

@@ -22,15 +22,17 @@ class Cat {
   say(message) {
     return (this.say = message);
   }
-  eat(op) {
-    this.weight = this.weight + op;
-    jerry.setLife("die");
+  eat(weight, object) {
+    if (object.status == "life") {
+      this.weight += weight;
+    }
+    object.setLife("die");
   }
   getWeight() {
     return this.weight;
   }
-  catch(speed) {
-    if (this.maxSpeed > jerry.speed) {
+  catch(object) {
+    if (this.maxSpeed > object) {
       alert("Đã bắt được chuột");
     } else {
       alert("Không bắt được chuột");

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+      width: 550px;
+      background-color: bisque;
+    }
+    th {
+      border: 1px solid #ccc;
+    }
+    td {
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100px;
+    }
+    p {
+      border: 1px solid #ccc;
+      background-color: aquamarine;
+      width: 150px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <div>
+      <input type="text" id="name" placeholder="Tên sản phẩm" />
+      <input type="text" id="price" placeholder="Giá" />
+      <input type="text" id="sll" placeholder="Số lượng" />
+      <input type="text" id="index" style="display: none" />
+      <button id="add" onclick="handleAdd()">Thêm</button>
+      <button id="edit" onclick="changeItem()" style="display: none">
+        Sửa
+      </button>
+    </div>
+    <table>
+      <tr>
+        <th>Stt</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá thành</th>
+        <th>Số lượng</th>
+        <th>Xóa</th>
+        <th>Sửa</th>
+      </tr>
+      <tbody id="product"></tbody>
+    </table>
+
+    <p id="total_product"></p>
+  </body>
+  <script src="/js/js/table.js"></script>
+</html>

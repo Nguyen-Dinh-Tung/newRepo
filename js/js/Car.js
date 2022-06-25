@@ -69,25 +69,25 @@ class Car {
     }
     return flag;
   }
-  // checkLose() {
-  //   setInterval(() => {
-  //     this.deleteCanvas();
-  //     this.drawObstacle();
-  //     if (
-  //       this.brickY > this.max - this.height &&
-  //       this.brickX >= this.x &&
-  //       this.brickX <= this.width + this.x
-  //     ) {
-  //       this.stop();
-  //     } else if (this.brickY > this.y) {
-  //       this.brickX = Math.floor(Math.random() * 850);
-  //       this.brickY = 0;
-  //       this.drawObstacle();
-  //       this.checkLose();
-  //       console.log("check Lose");
-  //     }
-  //   }, 2000);
-  // }
+  checkLose() {
+    setInterval(() => {
+      this.deleteCanvas();
+      this.drawObstacle();
+      if (
+        this.brickY > this.max - this.height &&
+        this.brickX >= this.x &&
+        this.brickX <= this.width + this.x
+      ) {
+        this.stop();
+      } else if (this.brickY > this.y) {
+        this.brickX = Math.floor(Math.random() * 850);
+        this.brickY = 0;
+        this.drawObstacle();
+        this.checkLose();
+        console.log("check Lose");
+      }
+    }, 2000);
+  }
   start() {
     this.runInterval();
   }
